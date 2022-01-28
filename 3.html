@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css">
+
+    <title>Sum of N Numbers</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="heading">
+            <h1 id ="title">Sum of N Numbers</h1>
+        </div>
+        <div class="form">
+            <div class="input-number">
+                <input type="number" placeholder="Enter any number"  name= "num" class="input">
+            </div>
+        <div class="btnn">
+            <input type="submit" value="Click Me" class="btn" onclick="MyFunction()">
+        </div>
+    </div>
+    <script>
+        function MyFunction(){
+            var num = document.getElementsByName("num")[0].value;
+            var sum= 0;
+            for(var i=0;i<num;i++)
+            {
+                sum = sum + i; 
+            }
+            alert(sum);
+        }
+    </script>
+</body>
+</html>

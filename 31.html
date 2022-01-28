@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Numbers</title>
+</head>
+<body>
+    <script>
+        function PrimeNumber(num)
+        {
+            for ( var i = 2; i < num; i++ )
+            {
+                if ( num % i === 0 )
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function ListOfNumbers(num)
+        {
+            sum = 0;
+            var list = [];
+            var list1 =[]
+            for ( var i = 2; i < num; i++ )
+            {
+                if ( PrimeNumber(i) )
+                {
+                    list.push(i);
+                    sum = sum+i; 
+                }
+            }
+            document.write("Prime Numbers are=> ", list); 
+            for (var j = 0 ;j<list.length-1;j++)
+            {
+                list1.push(list[j+1]-list[j]);
+            }
+            return list1; 
+        }
+
+    const ans = ListOfNumbers(100);
+    document.write("<br> <br> Diffrence of prime number is => ",ans)
+</script>
+</body>
+</html>
